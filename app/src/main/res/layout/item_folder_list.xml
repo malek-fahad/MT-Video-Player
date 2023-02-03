@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/folderIcon"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_folder_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:cardBackgroundColor="@color/pink"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="@id/folderIcon"
+        app:layout_constraintEnd_toEndOf="@id/folderIcon"
+        app:layout_constraintTop_toTopOf="@id/folderIcon"
+        app:layout_constraintBottom_toBottomOf="@id/folderIcon"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.9">
+        <TextView
+            android:id="@+id/totalNewVideosTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/folderNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Folder Name"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintStart_toEndOf="@id/folderIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/folderIcon"
+        app:layout_constraintBottom_toBottomOf="@id/folderIcon"
+        app:layout_constraintVertical_bias="0.3"/>
+    <TextView
+        android:id="@+id/totalVideosTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="27 videos"
+        android:textColor="@color/has"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        app:layout_constraintStart_toEndOf="@id/folderIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/folderNameTV"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

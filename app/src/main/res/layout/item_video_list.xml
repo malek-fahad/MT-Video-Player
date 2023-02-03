@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/PreviewCV"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/videoPreviewIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_video_preview"
+            android:scaleType="fitCenter"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardBackgroundColor="@color/pink"
+        app:layout_constraintStart_toStartOf="@id/PreviewCV"
+        app:layout_constraintTop_toTopOf="@id/PreviewCV"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp">
+        <TextView
+            android:id="@+id/newVideoTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="NEW"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardBackgroundColor="@color/dark"
+        app:layout_constraintEnd_toEndOf="@id/PreviewCV"
+        app:layout_constraintBottom_toBottomOf="@id/PreviewCV"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp">
+        <TextView
+            android:id="@+id/videoTimeTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="02:46:34"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/videoTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/video_title"
+        app:layout_constraintStart_toEndOf="@id/PreviewCV"
+        app:layout_constraintEnd_toStartOf="@id/videoOption"
+        app:layout_constraintTop_toTopOf="@id/PreviewCV"
+        app:layout_constraintBottom_toBottomOf="@id/PreviewCV"
+        android:layout_marginLeft="20dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/videoOption"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_three_dot_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/PreviewCV"
+        app:layout_constraintBottom_toBottomOf="@id/PreviewCV"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
