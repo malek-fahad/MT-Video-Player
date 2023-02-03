@@ -45,14 +45,19 @@ public class MainActivity extends AppCompatActivity {
             recentVideo();
         });
 
+        RecentPlayDatabase.getRecentPlayDatabase(MainActivity.this);
+
 
     }
 
     private void recentVideo() {
 
-        Intent intent = new Intent(getApplicationContext(), PlayerActivity.class);
+
+
+
+        //Intent intent = new Intent(getApplicationContext(), PlayerActivity.class);
         //intent.putExtra("contact", contact);
-        startActivity(intent);
+       // startActivity(intent);
 
 
     }

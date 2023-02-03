@@ -59,7 +59,8 @@ public class PlayerActivity extends AppCompatActivity {
 
         //updateRecentVideoToDB
 
-//        id = 1;
+
+        id = 1;
         updateRecentVideoToDB(videoTitle,videoUri);
 
 
@@ -163,16 +164,17 @@ public class PlayerActivity extends AppCompatActivity {
 
 
         //saveRecentVideoToDB
-        RecentPlay recentPlay = new RecentPlay();
-        recentPlay.setVideoTitle(videoTitle);
-        recentPlay.setVideoUri(String.valueOf(videoUri));
-        RecentPlayDatabase.getRecentPlayDatabase(getApplicationContext()).getDao().insertRecentPlay(recentPlay);
+//        RecentPlay recentPlay = new RecentPlay();
+//        recentPlay.setVideoTitle(videoTitle);
+//        recentPlay.setVideoUri(String.valueOf(videoUri));
+//        RecentPlayDatabase.getRecentPlayDatabase(getApplicationContext()).getDao().insertRecentPlay(recentPlay);
 
-//        //updateRecentPlay = new RecentPlay();
-//        updateRecentPlay.setId(id);
-//        updateRecentPlay.setVideoTitle(videoTitle);
-//        updateRecentPlay.setVideoUri(String.valueOf(videoUri));
-//        RecentPlayDatabase.getRecentPlayDatabase(getApplicationContext()).getDao().updateRecentPlay(updateRecentPlay);
+        updateRecentPlay = new RecentPlay();
+
+        updateRecentPlay.setId(id);
+        updateRecentPlay.setVideoTitle(videoTitle);
+        updateRecentPlay.setVideoUri(String.valueOf(videoUri));
+        RecentPlayDatabase.getRecentPlayDatabase(getApplicationContext()).getDao().updateRecentPlay(updateRecentPlay);
 
     }
 

@@ -10,7 +10,7 @@
         android:id="@+id/folderListRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_video_list"
+        tools:listitem="@layout/item_folder_list"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 

@@ -15,17 +15,21 @@ public abstract class RecentPlayDatabase extends RoomDatabase {
 
     public static RecentPlayDatabase getRecentPlayDatabase(Context context){
 
+
         if (recentPlayDatabase==null){
             recentPlayDatabase = Room.databaseBuilder(
                     context,
                     RecentPlayDatabase.class,
                     "recentPlayDatabase")
                     .allowMainThreadQueries().build();
-//            //saveRecentVideoToDB
-//            RecentPlay recentPlay = new RecentPlay();
-//            recentPlay.setVideoTitle("");
-//            recentPlay.setVideoUri("");
-//            RecentPlayDatabase.getRecentPlayDatabase(context).getDao().insertRecentPlay(recentPlay);
+
+
+
+            //saveRecentVideoToDB
+            RecentPlay recentPlay = new RecentPlay();
+            recentPlay.setVideoTitle("");
+            recentPlay.setVideoUri("");
+            RecentPlayDatabase.getRecentPlayDatabase(context).getDao().insertRecentPlay(recentPlay);
         }
 
         return recentPlayDatabase;
